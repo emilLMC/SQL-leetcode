@@ -1,4 +1,4 @@
 <For full question login to leetcode>: 584. Find Customer Referee
-
+Difficulty rating: Easy
 My Solution:
 select name from customer where  referee_id not in (2) or referee_id is null
