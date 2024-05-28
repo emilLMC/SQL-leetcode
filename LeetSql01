@@ -1,4 +1,5 @@
 1757. Recyclable and Low Fat Products
+Difficulty rating: Easy
 My Solution below: I dont think the the case sensitive check is needed should work without it as well..
 
 select product_id from products where Upper(low_Fats)='Y' and upper(recyclable)='Y'
