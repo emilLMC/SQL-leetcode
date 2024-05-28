@@ -1,0 +1,9 @@
+1378 Replace Employee Id with unique identifier
+
+Difficulty rating: EASY
+
+Solution: 
+
+SELECT eu.unique_id,e.name 
+FROM employees e LEFT JOIN EmployeeUNi eu 
+ON e.id=eu.id
