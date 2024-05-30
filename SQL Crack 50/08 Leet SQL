@@ -1,0 +1,13 @@
+1581 Customer who visited but Did not make any transaction
+My NOTE :
+Interesting question wasted some time on this but its easier to break the question and then think about it !!
+As in first understand what join is best suitable to give you the desired table that helps with the comparision and then filter out based on your need
+
+DIFFICULTY RATING : EASY
+
+My Solution:
+SELECT customer_id,count(customer_id) as "count_no_trans"
+FROM visits v LEFT JOIN transactions t
+ON v.visit_id = t.visit_id
+WHERE transaction_id is null
+GROUP BY customer_id
