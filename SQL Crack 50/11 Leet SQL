@@ -1,0 +1,10 @@
+577. Employee Bonus
+
+Note: Easy solution but i wasted time on the null factors so am not sure if this is the best solution for it...
+
+Rating: EASY
+
+SELECT  e.name , b.bonus
+FROM employee e  LEFT JOIN bonus b 
+ON e.empid=b.empid 
+WHERE  b.bonus<1000 OR B.bonus is null
