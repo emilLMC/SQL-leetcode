@@ -1,0 +1,13 @@
+197. Rising Temperature 
+
+Note: Since there is a need to check previous value on the same table did a self join and then did date sub to check for previous date 
+while joining and then defined wherre condition to check the < temp
+
+Difficulty rating: EASY 
+
+My solution : 
+
+SELECT w1.id
+FROM weather w
+JOIN weather w1 ON w.recorddate = DATE_SUB(w1.recorddate, INTERVAL 1 DAY)
+WHERE w.temperature < w1.temperature;
