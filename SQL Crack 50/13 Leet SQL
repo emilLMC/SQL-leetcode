@@ -1,0 +1,14 @@
+570. Manager with atleast 5 reportees
+
+Note: self join considering the second table as manager table
+in my query e1 - employee table 
+e2 Manager table
+
+Difficulty rating: EASY
+
+Solution:
+SELECT e2.name
+FROM Employee e1 join Employee e2
+ON e2.id=e1.managerid
+GROUP BY e2.name,e2.id
+HAVING count(e2.id)>4 
